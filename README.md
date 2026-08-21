@@ -55,7 +55,7 @@ Job Finder's public API lets you retrieve current job listings from selected com
 | GET | ` /api/healthz ` | Health check | 
 | GET | ` /api/jobs ` | Retrieve job listing data |
 | GET | ` /api/jobs/stats ` | Display statistics on jobs available in the database | 
-| POST | ' /api/scrape/run ` | Start aggregating manually |
+| POST | ` /api/scrape/run ` | Start aggregating manually |
 | GET | ` /api/scrape/status ` | Check the status of an aggregation run |
 | GET | ` /api/companies ` | List all companies that are included in the database |
 | POST | ` /api/companies ` | Add a company to be included in the database |
