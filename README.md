@@ -46,5 +46,86 @@ For example:
   }
 ```
 
+## Endpoints
 
+### Purpose
 
+## Health Check
+
+```
+
+GET /api/healthz
+
+```
+
+### Job statistics
+
+```
+
+GET /apijobs/stats
+
+```
+
+### Dashboard job listing data
+
+```
+
+GET /api/jobs
+
+```
+
+### Dashboard job statistics
+
+```
+
+GET /api/stats
+
+```
+
+### Start a scrape manually
+
+```
+
+GET /api/scrape/run
+
+```
+
+### Check a scrape's progress
+
+```
+
+GET /api/scrape/status
+
+```
+
+### List all companies with available jobs
+
+```
+
+GET /api/companies
+
+```
+
+### Add a target company
+
+```
+
+POST /api/companies
+
+```
+
+### Update a company's target
+
+```
+
+PATCH /api/companies/:id
+
+```
+
+### Remove a company's target
+
+```
+
+DELETE api/companies/:id
+
+```
