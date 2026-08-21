@@ -48,84 +48,16 @@ For example:
 
 ## Endpoints
 
-### Purpose
+Job Finder's public API lets you retrieve current job listings from selected companies, review statistics on where available jobs are located, and check the aggregator status. Every endpoint requires an `X-API-Key` header.
 
-## Health Check
-
-```
-
-GET /api/healthz
-
-```
-
-### Job statistics
-
-```
-
-GET /apijobs/stats
-
-```
-
-### Dashboard job listing data
-
-```
-
-GET /api/jobs
-
-```
-
-### Dashboard job statistics
-
-```
-
-GET /api/stats
-
-```
-
-### Start a scrape manually
-
-```
-
-GET /api/scrape/run
-
-```
-
-### Check a scrape's progress
-
-```
-
-GET /api/scrape/status
-
-```
-
-### List all companies with available jobs
-
-```
-
-GET /api/companies
-
-```
-
-### Add a target company
-
-```
-
-POST /api/companies
-
-```
-
-### Update a company's target
-
-```
-
-PATCH /api/companies/:id
-
-```
-
-### Remove a company's target
-
-```
-
-DELETE api/companies/:id
-
-```
+| Method | Endpoint | Purpose |
+| --- | --- | --- |
+| GET | ` /api/healthz ` | Health check | 
+| GET | ` /api/jobs ` | Retrieve job listing data |
+| GET | ` /api/jobs/stats ` | Display statistics on jobs available in the database | 
+| POST | ' /api/scrape/run ` | Start aggregating manually |
+| GET | ` /api/scrape/status ` | Check the status of an aggregation run |
+| GET | ` /api/companies ` | List all companies that are included in the database |
+| POST | ` /api/companies ` | Add a company to be included in the database |
+| PATCH | ` /api/companies/:id ` | Update a target company |
+| DELETE | ` /api/companies/:id ` | Remove a target company |
