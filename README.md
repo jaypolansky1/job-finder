@@ -58,7 +58,7 @@ A successful response returns a jobs array and pagination details:
 
 ## Endpoints
 
-Job Finder's public API lets you retrieve current job listings, review statistics and location counts, check the aggregator status, and download the live API definition. Every endpoint requires an `X-API-Key` header.
+Job Scraper's public API lets you retrieve current job listings, review statistics and location counts, check the aggregator status, and download the live API definition. Every endpoint requires an `X-API-Key` header.
 
 | Method | Endpoint | Purpose |
 | --- | --- | --- |
