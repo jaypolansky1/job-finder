@@ -70,7 +70,7 @@ Job Finder's public API lets you retrieve current job listings, review statistic
 
 ## Errors
 
-| Status Code | Meaning | What To Do |
+| Status Code | Error Code | Meaning |
 | --- | --- | --- |
 | 400 | `INVALID_QUERY` | One or more query parameters are invalid. |
 | 401 | `UNAUTHORIZED` | A valid API key is required. |
@@ -84,7 +84,7 @@ API keys are limited to 60 requests per minute. If you exceed this limit, the AP
 
 ## Data Freshness
 
-Job listings are refreshed periodically when a scrape runs. Use ` GET /api/v1/status ` to check the latest aggregator run.
+Job listings are refreshed periodically when a scrape runs. Use `GET /api/v1/status` to check the latest aggregator run.
 
 ## Contact
 
