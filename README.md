@@ -75,7 +75,7 @@ Job Finder's public API lets you retrieve current job listings, review statistic
 | 400 | `INVALID_QUERY` | One or more query parameters are invalid. |
 | 401 | `UNAUTHORIZED` | A valid API key is required. |
 | 404 | `NOT_FOUND` | The requested public API endpoint does not exist. | 
-| 429 | `RATE_LIMITED`| The rate limit was exceeded. | 
+| 429 | `RATE_LIMITED` | The rate limit was exceeded. | 
 | 500 | `INTERNAL_ERROR` | An unexpected server-side error occurred. | 
 
 ## Rate Limits
