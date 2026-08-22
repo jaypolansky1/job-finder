@@ -8,7 +8,7 @@ This Application Programming Interface (API) seeks to streamline the job applica
 
 ## Base URL
 
-https://job-scraper.replit.app/
+https://job-scraper.replit.app
 
 ## Authentication
 
@@ -17,47 +17,74 @@ The API uses API-key authentication.
 ` X-API-Key: your-generated-api-key
 `
 
-API keys are issued by the API owner upon request.
-
-Keep API keys private. Do not include them in public code or screenshots.
+To request API access, contact the API owner ` jay@technicalwriting.io `. Keys are issued individually and should be stored securely.
 
 ## Quick Start
 
 Make your first request:
 
-```
-curl "[BASE_URL]/[ENDPOINT]' \
--H "[HEADER-NAME]: [YOUR_API_KEY]"
-```
-
-A successful response returns:
-
-```
-  {
-  "[field]": "[example value]"
-  }
+```bash
+curl https://job-scraper.replit.app/api/v1/jobs?pageSize=10" \
+-H "[YOUR_API_KEY]"
 ```
 
-For example:
+A successful response returns a jobs array and pagination details:
 
 ```
-  {
-  "location": "Atlanta"
-  }
+
+{
+    "jobs": [
+        {
+            "id": 236,
+            "title": "Technical content developer",
+            "company": "Klara Systems",
+            "platform": "hackernews",
+            "location": "Remote",
+            "isRemote": true,
+            "salaryRaw": null,
+            "url": "https://news.ycombinator.com/item?id=49161851",
+            "postedAt": "2026-08-03T21:43:16.000Z",
+            "scrapedAt": "2026-08-19T20:04:53.339Z",
+            "searchTerm": "technical content developer"
+        },
+{
+
 ```
+
+
 
 ## Endpoints
 
-Job Finder's public API lets you retrieve current job listings from selected companies, review statistics on where available jobs are located, and check the aggregator status. Every endpoint requires an `X-API-Key` header.
+Job Finder's public API lets you retrieve current job listings, review statistics and location counts, check the aggregator status, and download the live API definition. Every endpoint requires an `X-API-Key` header.
 
 | Method | Endpoint | Purpose |
 | --- | --- | --- |
-| GET | ` /api/healthz ` | Health check | 
-| GET | ` /api/jobs ` | Retrieve job listing data |
-| GET | ` /api/jobs/stats ` | Display statistics on jobs available in the database | 
-| POST | ` /api/scrape/run ` | Start aggregating manually |
-| GET | ` /api/scrape/status ` | Check the status of an aggregation run |
-| GET | ` /api/companies ` | List all companies that are included in the database |
-| POST | ` /api/companies ` | Add a company to be included in the database |
-| PATCH | ` /api/companies/:id ` | Update a target company |
-| DELETE | ` /api/companies/:id ` | Remove a target company |
+| GET | ` /api/v1/jobs ` | Retrieve and filter job listing data. |
+| GET | ` /api/v1/jobs/stats ` | Display job totals and platform breakdown. | 
+| GET | ` /api/v1/locations ` | Display the number of jobs available in each location. |
+| GET | ` /api/v1/status ` | Check the aggregator's latest run and current status. |
+| GET | ` /api/v1/openapi.json ` | Download the API definitions. |
+
+## Errors
+
+| Status Code | Meaning | What To Do |
+| --- | --- | --- |
+| 400 | 'INVALID QUERY` | One or more query parameters are invalid. |
+| 401 | `UNAUTHORIZED` | A valid API key is required. |
+| 404 | `NOT FOUND` | The requested public API Endpoint doesn't exist. | 
+| 429 | `RATE LIMITED`| The rate limited was exceeded. | 
+| 500 | `INTERNAL ERROR` | An unexpected server side error occurred. | 
+
+## Rate Limits
+
+API keys are limited to 60 requests per minute. If you exceed this limit, the API returns ` 429 RATE_LIMITED`.
+
+## Data Freshness
+
+Job listings are refreshed daily. Use ` GET /api/v1/status ` to check the latest aggregator run.
+
+## Contact
+
+For API access, questions, or feedback, contact ` jay@technicalwriting.io `.
+
+
