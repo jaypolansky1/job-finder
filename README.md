@@ -1,6 +1,6 @@
-# Job Finder
+# Job Scraper
 
-Job Finder aggregates job listings from across the web to highlight technical writing, developer advocate, and Learning & Development (L&D) roles.
+Job Scraper aggregates job listings from across the web to highlight technical writing, developer advocate, and Learning & Development (L&D) roles.
 
 ## Overview
 
