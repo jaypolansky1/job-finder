@@ -14,8 +14,7 @@ https://job-scraper.replit.app
 
 The API uses API-key authentication.
 
-` X-API-Key: your-generated-api-key
-`
+` X-API-Key: YOUR_API_KEY `
 
 To request API access, contact the API owner ` jay@technicalwriting.io `. Keys are issued individually and should be stored securely.
 
@@ -24,13 +23,13 @@ To request API access, contact the API owner ` jay@technicalwriting.io `. Keys a
 Make your first request:
 
 ```bash
-curl https://job-scraper.replit.app/api/v1/jobs?pageSize=10" \
--H "[YOUR_API_KEY]"
+curl "https://job-scraper.replit.app/api/v1/jobs?pageSize=1" \
+-H "X-API-Key: YOUR_API_KEY"
 ```
 
 A successful response returns a jobs array and pagination details:
 
-```
+```json
 
 {
     "jobs": [
@@ -46,8 +45,12 @@ A successful response returns a jobs array and pagination details:
             "postedAt": "2026-08-03T21:43:16.000Z",
             "scrapedAt": "2026-08-19T20:04:53.339Z",
             "searchTerm": "technical content developer"
-        },
-{
+        }
+     ],
+    "total": 1,
+    "page": 1,
+    "pageSize": 1
+}
 
 ```
 
@@ -59,29 +62,29 @@ Job Finder's public API lets you retrieve current job listings, review statistic
 
 | Method | Endpoint | Purpose |
 | --- | --- | --- |
-| GET | ` /api/v1/jobs ` | Retrieve and filter job listing data. |
-| GET | ` /api/v1/jobs/stats ` | Display job totals and platform breakdown. | 
-| GET | ` /api/v1/locations ` | Display the number of jobs available in each location. |
-| GET | ` /api/v1/status ` | Check the aggregator's latest run and current status. |
-| GET | ` /api/v1/openapi.json ` | Download the API definitions. |
+| GET | `/api/v1/jobs` | Retrieve and filter current job listings. |
+| GET | `/api/v1/jobs/stats` | Display job totals and platform breakdown. | 
+| GET | `/api/v1/locations` | Display the number of jobs available in each location. |
+| GET | `/api/v1/status` | Check the aggregator's latest run and current status. |
+| GET | `/api/v1/openapi.json` | Download the API definition. |
 
 ## Errors
 
 | Status Code | Meaning | What To Do |
 | --- | --- | --- |
-| 400 | `INVALID QUERY` | One or more query parameters are invalid. |
+| 400 | `INVALID_QUERY` | One or more query parameters are invalid. |
 | 401 | `UNAUTHORIZED` | A valid API key is required. |
-| 404 | `NOT FOUND` | The requested public API Endpoint doesn't exist. | 
-| 429 | `RATE LIMITED`| The rate limited was exceeded. | 
-| 500 | `INTERNAL ERROR` | An unexpected server side error occurred. | 
+| 404 | `NOT_FOUND` | The requested public API endpoint doesn't exist. | 
+| 429 | `RATE_LIMITED`| The rate limited was exceeded. | 
+| 500 | `INTERNAL ERROR` | An unexpected server-side error occurred. | 
 
 ## Rate Limits
 
-API keys are limited to 60 requests per minute. If you exceed this limit, the API returns ` 429 RATE_LIMITED`.
+API keys are limited to 60 requests per minute. If you exceed this limit, the API returns `429 RATE_LIMITED`.
 
 ## Data Freshness
 
-Job listings are refreshed periodically. Use ` GET /api/v1/status ` to check the latest aggregator run.
+Job listings are refreshed periodically when a scrape runs. Use ` GET /api/v1/status ` to check the latest aggregator run.
 
 ## Contact
 
