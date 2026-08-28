@@ -49,11 +49,23 @@ To test the API, I signed up for Postman. The sign-up process was incredibly sim
 
 To test the less-than-idea use cases, I made my own mistakes to experience the errors for myself. After all, not everything goes according to plan, and someone newer to APIs like me is prone to make mistakes every now and then. For instance, I tried pulling some information using an endpoint that didn't exist and received:
 
-``` | 404 | `NOT_FOUND` | The requested public API endpoint does not exist. | ```
+``` {
+    "error": {
+        "code": "NOT_FOUND",
+        "message": "The requested public API endpoint does not exist."
+    }
+}
+```
 
 And, of course, I tried submitting a GET Request without providing my key and the result was as expected:
 
-``` | 401 | `UNAUTHORIZED` | A valid API key is required. | ```
+``` {
+    "error": {
+        "code": "UNAUTHORIZED",
+        "message": "A valid API key is required."
+    }
+}
+ ```
 
 ## Lessons
 
