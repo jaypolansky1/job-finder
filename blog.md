@@ -1,10 +1,10 @@
 # I Created An API To Learn How To Document One
 
-API Documentation. As I look for my next role in technical writing, I read job posting after job posting looking for someone to create developer-facing documentation. The challenge is that most of my experience in technical writing, up until now, has had a focus of client-facing documentation. Knowledge base articles. Product announcement emails. I crafted sentence after sentence to make complex software easy to use for non-technical (or at least non-developer) audiences. I always worked from the User Interface (UI) of the software, never the Application Programming Interface (API). I recently decided to change that, as I had built some side projects, and I could (or at least Replit could) create APIs out of them.
+API Documentation. As I look for my next role in technical writing, I read job posting after job posting looking for someone to create developer-facing documentation. The challenge is that most of my experience in technical writing, up until now, has had a focus of client-facing documentation. Knowledge base articles. Product announcement emails. I crafted sentence after sentence to make complex software easy to use for non-technical (or at least non-developer) audiences. My goal was to create clear and usable content that was accessible to all users of all abilities. I always worked from the User Interface (UI) of the software as it was designed for end users, and I had not had the opportunity to document Application Programming Interface (API) or regularly make developer-facing content. I recently decided to change that, as I had built some side projects, and I could (or at least Replit could) create APIs out of them.
 
 ## Keys and Endpoints
 
-Enter Job Finder. As part of my own job search, I built an aggregation tool that would search through company websites to scan for open postings for technical writing and adjacent fields. To build the API, I just prompted Replit's AI agent to build it. Then, I pushed the changes to the app to deployment. Easy. Now for the documentation part. I wasn't sure of the best way to document an API, so I asked Replit to create an outline for the documentation. Hpwever, I instructed the AI to fill out the details, even though it could. I ended up with the following sections:
+Enter Job Finder. Job Finder aggregates job listings from across the web to highlight technical writing, developer advocate, and Learning & Development (L&D) roles. As part of my search for a new role, I built an aggregation tool that would search through company websites for job postings. It would scan for open listings that met criteria for different job titles, with technical writing jobs as just one of many adjacent fields and job titles. To expand the side project into an API, I just prompted Replit's AI agent to add an API for the app. Then, I pushed the changes to the app to deployment. Easy. Now for the documentation part. I wasn't sure of the best way to document an API, so I asked Replit to create an outline for the documentation. However, I instructed the AI to fill out the details, even though it could and it would if I did not instruct it otherwise. I ended up with the following sections for my API documentation:
 
 * Base URL
 * Authentication
@@ -31,7 +31,7 @@ The interesting thing I learned about my API Key is not all APIs use the same na
 
 ## Testing The API
 
-To test the API, I signed up for Postman. The sign-up process was incredibly simple, and I was up and running in no time. (Side note: When I think of Postman I think of that old song from the 60's or that newer remix mashup that was so popular a few years ago.) It was kind of a thrill to do my first API calls and have the API return data like a job posting from Hacker News instead of reviewing it from my app's User Interface (UI) itself. I am so used to experiencing software from the unsophistcated end user experience: you just click a button or a link and data displays in rows and tables. Having the data returned to me in code was something else:
+To test the API, and ensure all of the endpoints were working properly, I signed up for [Postman](https://www.postman.co). The sign-up process was incredibly simple, and I was up and running in no time. (Side note: When I think of Postman I think of that old song from the 60's or that newer remix mashup that was so popular a few years ago.) It was kind of a thrill to do my first API calls and have the API return data like a job posting from Hacker News instead of reviewing it from my app's User Interface (UI) itself. I am so used to experiencing software from the unsophistcated end user experience: you just click a button or a link and data displays in rows and tables. Having the data returned to me in code was something else:
 
 ```json
 
@@ -58,7 +58,7 @@ To test the API, I signed up for Postman. The sign-up process was incredibly sim
 
 ```
 
-To test the less-than-idea use cases, I made my own mistakes to experience the errors for myself. After all, not everything goes according to plan, and someone newer to APIs (like me!) who is using my APIs is prone to make mistakes every now and then. Well, maybe more than ever now and then, but at least they have AI agents to assist them. For instance, to generate an error code, I tried pulling some information using an endpoint that didn't exist and received:
+To test the less-than-ideal use cases, I made my own mistakes to experience the errors for myself. After all, not everything goes according to plan, and someone newer to APIs (like me!) who is using my APIs is prone to make mistakes every now and then. Well, maybe more than ever now and then, but at least they have AI agents to assist them. For instance, to generate an error code, I tried pulling some information using an endpoint that didn't exist and received:
 
 ``` {
     "error": {
@@ -85,7 +85,7 @@ All in all, I think my first experience with documenting APIs was a success. I t
 
 ## Lessons
 
-Now that I have shared my experience, I would love to have your feedback. How have you learned how to document APIs? Have you created an app with an API to learn how to create developer documentation? If you are already an API expert, how have you learned something new for technical writing? Are you learn by doing like me, or do you prefer to dive in the docs, a book, or a tutorial? Reach out to me at `jay@technicalwriting.io `.
+Now that I have shared my experience, I would love to have your feedback. How have you learned how to document APIs? Have you created an app with an API to learn how to create developer documentation? If you are already an API expert, how have you learned something new for technical writing? Are you learn by doing like me, or do you prefer to dive in the docs, a book, or a tutorial? Reach out to me at `jay@technicalwriting.io`.
 
 
 
