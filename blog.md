@@ -6,7 +6,7 @@ API Documentation. As I look for my next role in technical writing, I read job p
 
 Enter Job Finder.
 
-As part of my search for a new role, I built an aggregation tool that would search through company websites for job postings (instead of, say, LinkedIn or Indeed). This software Job scans for open listings that met criteria for different job titles, with technical writing jobs as just one of many adjacent fields and job titles.
+As part of my search for a new role, I built an aggregation tool that would search through company websites for job postings (instead of, say, LinkedIn or Indeed). This software scans for open listings that met criteria for different job titles, with technical writing jobs as just one of many adjacent fields and job titles.
 
 You have to manually start the aggregator, but, once it starts working, it will search through the career section of the websites of hundreds of companies and, if it finds a posting that matches my criteria, it will add a row to a table with the role name, company name, link, and a few more data points. That is the user experience as it works on my Replit-hosted website. To expand the side project into an API, I just prompted Replit's AI agent to add an API for the app. Then, I pushed the changes to the app to deployment. Easy. Now for the documentation part. 
 
