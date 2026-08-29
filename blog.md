@@ -87,7 +87,7 @@ And, of course, I tried submitting a GET Request without providing my key and th
 All in all, I think my first experience with documenting APIs was a success. I think if I had to take any lessons away from it:
 
 * I would recommend that anyone who wants to gain technical skills beyond what they learned in previous roles is to simply build something for your self. And then document it. It's always more interesting to document something that you have an interest in and documenting a job search API was a perfect fit for someone looking for a job.
-* I would also recommend that you let your AI agent guide you but not do the work for you. Having the AI agent outline the docs but not write them ouright (it's fully capable of doing so I instructed it specifically not to write the docs for me.) This approach provides much-needed structure, while it still allows you to do the work.
+* I would also recommend letting an AI agent guide but not do the work. Having the AI agent outline the docs but not write them ouright (it's fully capable of doing so I instructed it specifically not to write the docs for me.) This approach provides much-needed structure, while it still allows you to do the work.
 
 ## Lessons
 
