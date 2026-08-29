@@ -23,7 +23,7 @@ I wasn't sure of the best way to document an API, so I asked Replit to create an
 
 To authenticate with the app, users would request and API key from me, but, in reality, the API was really meant for me for documentation purposes, so I created a key for myself. The user (or me) would authenticate this way:
 
-` X-API-Key: YOUR_API_KEY `
+`X-API-Key: YOUR_API_KEY`
 
 The interesting thing I learned about my API Key is not all APIs use the same name for the key (so when I went to test an API that I didn't create in Postman, I was surprised that the API key had a slightly different name.) The API would have a few endpoints, with the goal of pulling job listings from the app, along with retrieving some statistics like the number of jobs aggregated and from which platform they were sourced. I also added an endpoints for the number of jobs available in each location, which, of course, isn't always 100 percent clear. I documented only GET Requests because the goal of the project was to keep the project simple and I was only really intending the API to pull data. I was not looking to POST data because any changes I would need to make (like add new target companies) I would likely do through Replit's AI agent itself.
 
