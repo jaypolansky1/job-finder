@@ -25,7 +25,7 @@ To authenticate with the app, users would request and API key from me, but, in r
 
 ` X-API-Key: YOUR_API_KEY `
 
-The interesting thing I learned about my API Key is not all APIs use the same name for the key (so when I went to test a different API in Postman, I was surprised that the key had a slightly different name.) The API would have a few endpoints, with the goal of pulling job listings from the app, along with retrieving some statistics like the number of jobs aggregated and from which platform they were sourced. I also added an endpoints for the number of jobs available in each location, which, of course, isn't always 100 percent clear. I documented only GET Requests because the goal of the project was to keep the project simple and I was only really intending the API to pull data. I was not looking to POST data because any changes I would need to make (like add new target companies) I would likely do through Replit's AI agent itself.
+The interesting thing I learned about my API Key is not all APIs use the same name for the key (so when I went to test an API that I didn't create in Postman, I was surprised that the API key had a slightly different name.) The API would have a few endpoints, with the goal of pulling job listings from the app, along with retrieving some statistics like the number of jobs aggregated and from which platform they were sourced. I also added an endpoints for the number of jobs available in each location, which, of course, isn't always 100 percent clear. I documented only GET Requests because the goal of the project was to keep the project simple and I was only really intending the API to pull data. I was not looking to POST data because any changes I would need to make (like add new target companies) I would likely do through Replit's AI agent itself.
 
 | Method | Endpoint | Purpose |
 | --- | --- | --- |
@@ -83,13 +83,13 @@ And, of course, I tried submitting a GET Request without providing my key and th
     }
 }
  ```
+
+## Lessons
  
 All in all, I think my first experience with documenting APIs was a success. I think if I had to take any lessons away from it:
 
 * I would recommend that anyone who wants to gain technical skills beyond what they learned in previous roles is to simply build something for your self. And then document it. It's always more interesting to document something that you have an interest in and documenting a job search API was a perfect fit for someone looking for a job.
 * I would also recommend letting an AI agent guide but not do the work. Having the AI agent outline the docs but not write them ouright (it's fully capable of doing so I instructed it specifically not to write the docs for me.) This approach provides much-needed structure, while it still allows you to do the work.
-
-## Lessons
 
 Now that I have shared my experience, I would love to have your feedback. How have you learned how to document APIs? Have you created an app with an API to learn how to create developer documentation? If you are already an API expert, how have you learned something new for technical writing? Are you learn by doing like me, or do you prefer to dive in the docs, a book, or a tutorial? Reach out to me at `jay@technicalwriting.io`.
 
